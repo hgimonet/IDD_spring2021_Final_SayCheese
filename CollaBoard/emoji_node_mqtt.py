@@ -172,18 +172,25 @@ while True:
 
     # handle graceful quitting
     if webCam:
-        cv2.imshow(f'CollaBoard - mode {mode} (press m to switch drawing modes, or press q to quit.)', cv2.cvtColor(np.array(pil_img), cv2.COLOR_RGB2BGR))
-        # cv2.imshow('Mask (press q to quit.)', detected_colors)
         if cv2.waitKey(1) & 0xFF == ord('q'):
             cap.release()
             break
-        if cv2.waitKey(1) & 0xFF == ord('p'):
-            mode = min(mode+1, 11)
-            print(f"changing mode to {mode}")
+        if not ON_PI:
+            cv2.imshow(f'CollaBoard - mode {mode} (press m to switch drawing modes, or press q to quit.)', cv2.cvtColor(np.array(pil_img), cv2.COLOR_RGB2BGR))
+            # cv2.imshow('Mask (press q to quit.)', detected_colors)
+            if cv2.waitKey(1) & 0xFF == ord('p'):
+                mode = min(mode+1, 11)
+                print(f"changing mode to {mode}")
+        else:
+            cv2.imshow(f'CollaBoard (press q to quit.)',
+                       cv2.cvtColor(np.array(pil_img), cv2.COLOR_RGB2BGR))
     else:
         break
 
-    time.sleep(0.1)
+    if ON_PI:
+        time.sleep(0.2)
+    else:
+        time.sleep(0.1)
 
 cv2.destroyAllWindows()
 
