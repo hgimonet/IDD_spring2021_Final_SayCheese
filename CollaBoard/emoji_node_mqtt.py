@@ -11,6 +11,7 @@ import uuid
 import queue
 
 ON_PI = 'adafruit_mpr121' in sys.modules  # toggle this to false if not running on pi
+print(f"Running on a Pi: {ON_PI}")
 
 if ON_PI:
     import board
