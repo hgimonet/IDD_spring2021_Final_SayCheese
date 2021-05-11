@@ -40,8 +40,6 @@ else:
     for i in EMOJIS:
         EMOJIS[i] = Image.open(f'CollaBoard/{EMOJIS[i]}').resize((50, 50), Image.LANCZOS)
 
-mode = 0 # Drawing mode by default
-
 # Green HSV
 DETECT_COL_MIN = np.array((40, 30,30))
 DETECT_COL_MAX = np.array((70, 255,255))
@@ -52,13 +50,15 @@ DETECT_COL_MAX = np.array((70, 255,255))
 
 PAINT_SIZE = 2
 
-PIXEL_MEM = 2000
+PIXEL_MEM = 1500
 EMOJI_MEM = 12
+
+message_q = queue.Queue()
 
 saved_emoji = [] # N by 3 list of N (id, x, y)
 saved_pixel = []
 
-message_q = queue.Queue()
+mode = 0  # default mode is draw mode
 
 emoji_counting = False
 emoji_start = time.time()
@@ -128,9 +128,9 @@ while True:
 
     for pic, contour in enumerate(detected_contours):
         area = cv2.contourArea(contour)
-        if (area > 20):
+        if (area > 30):
             x, y, w, h = cv2.boundingRect(contour)
-            img = cv2.rectangle(img, (x, y), (x + w, y + h), (255, 0, 0), 2)
+            # img = cv2.rectangle(img, (x, y), (x + w, y + h), (255, 0, 0), 2)
             if mode == 0:  # paint mode
                 # mqtt post
                 client.publish(cam_topic,f"{x},{y}")
@@ -190,7 +190,7 @@ while True:
     if ON_PI:
         time.sleep(0.2)
     else:
-        time.sleep(0.1)
+        time.sleep(0.5)
 
 cv2.destroyAllWindows()
 
