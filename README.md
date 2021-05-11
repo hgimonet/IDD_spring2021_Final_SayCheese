@@ -4,9 +4,9 @@
 
 by Hortense Gimonet, Irene Font Peradejordi, Brandt Beckerman, Rui Maki
 
-- [What It Is](##What-It-Is)
-- [How to Use It](##How-to-Use-It)
-- [How To Made It](##How-To-Make-It)
+- [What It Is](#what-it-is)
+- [How to Use It](#how-to-use-it)
+- [How To Made It](#how-to-make-it)
 
 
 ## What It Is
