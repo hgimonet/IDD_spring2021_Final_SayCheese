@@ -10,6 +10,9 @@ The are multiple boards around campus, and all of them are connected. Editting o
 Grab the **writing tool** (a green piece of chalk or highlighter). 
 This is what you will use to interact with the Board! 
 
+### Eraser Mode
+To clear the entire board press 'e' on a laptop, or the eraser on the box.
+
 ### Drawing Mode
 
 In drawing mode, the tool will leave a trace wherever it is detected. 
@@ -46,15 +49,15 @@ The files required to laser cut and engrave the box are in [CollaBoard/Box_files
 
 | Number | Emoji |
 |--------|-----------|
-| 0 | paintbrush |
+| 0 | Paintbrush Mode |
 | 1 | grinning-face |
 | 2 | partying-face |
-| 3 | zany-face |
-| 4 | shamrock |
-| 5 | red-heart |
-| 6 | waving-hand |
-| 7 | globe |
-| 8 | graduation-cap |
-| 9 | bottle-with-popping-cork |
-| 1 | balloon |
-| 1 | light-bulb |
+| 3 | shamrock |
+| 4 | red-heart |
+| 5 | waving-hand |
+| 6 | globe |
+| 7 | graduation-cap |
+| 8 | bottle-with-popping-cork |
+| 9 | balloon |
+| 10 | light-bulb |
+| 11 | Eraser mode |
