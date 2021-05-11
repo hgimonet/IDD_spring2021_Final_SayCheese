@@ -43,8 +43,8 @@ For this project, you will need:
 - A single bright-colored object to be detected by the camera
 
 ### Code
-The only python required to run CollaBoard is [https://github.com/hgimonet/IDD_spring2021_Final_SayCheese/blob/main/CollaBoard/emoji_node_mqtt.py](). 
-You will also need the emoji image files in [https://github.com/hgimonet/IDD_spring2021_Final_SayCheese/blob/main/CollaBoard/emojis]()
+The only python required to run CollaBoard is [](CollaBoard/emoji_node_mqtt.py). 
+You will also need the emoji image files in [](CollaBoard/emojis)
 
 Each computer running the code must be equipped with a camera or webcam. 
 
