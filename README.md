@@ -57,6 +57,9 @@ python emoji_node_mqtt.py
 
 ### Making the Box
 The files required to laser cut and engrave the box are in [CollaBoard/Box_files](https://github.com/hgimonet/IDD_spring2021_Final_SayCheese/tree/main/CollaBoard/Box_files).
+They were based on this [box](https://3axis.co/laser-cut-wooden-box-with-sliding-lid-15x15x10-3mm-mdf-template-dxf-file/075yjn3o/).
+
+To cut and assemble the box, follow [this tutorial]().
 
 ### Assembly
 1. After putting all but the last faces of the box together, securely place the Pi inside.
