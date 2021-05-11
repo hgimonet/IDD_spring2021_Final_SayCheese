@@ -43,8 +43,8 @@ For this project, you will need:
 - A single bright-colored object to be detected by the camera
 
 ### Code
-The only python required to run CollaBoard is [](CollaBoard/emoji_node_mqtt.py). 
-You will also need the emoji image files in [](CollaBoard/emojis)
+The only python required to run CollaBoard is [CollaBoard/emoji_node_mqtt.py](https://github.com/hgimonet/IDD_spring2021_Final_SayCheese/blob/main/CollaBoard/emoji_node_mqtt.py). 
+You will also need the emoji image files in [CollaBoard/emojis](https://github.com/hgimonet/IDD_spring2021_Final_SayCheese/tree/main/CollaBoard/emojis)
 
 Each computer running the code must be equipped with a camera or webcam. 
 
@@ -56,7 +56,7 @@ python emoji_node_mqtt.py
 
 
 ### Making the Box
-The files required to laser cut and engrave the box are in [CollaBoard/Box_files]().
+The files required to laser cut and engrave the box are in [CollaBoard/Box_files](https://github.com/hgimonet/IDD_spring2021_Final_SayCheese/tree/main/CollaBoard/Box_files).
 
 ### Assembly
 1. After putting all but the last faces of the box together, securely place the Pi inside.
@@ -67,14 +67,14 @@ The files required to laser cut and engrave the box are in [CollaBoard/Box_files
 | Number | Emoji |
 |--------|-----------|
 | 0 | Paintbrush Mode |
-| 1 | grinning-face |
-| 2 | partying-face |
-| 3 | shamrock |
-| 4 | red-heart |
-| 5 | waving-hand |
-| 6 | globe |
+| 1 | grinning-face :grinning: |
+| 2 | partying-face :partying_face:|
+| 3 | shamrock :shamrock: |
+| 4 | red-heart :hearts: |
+| 5 | waving-hand :wave: |
+| 6 | globe :earth_americas: |
 | 7 | graduation-cap |
-| 8 | bottle-with-popping-cork |
-| 9 | balloon |
-| 10 | light-bulb |
+| 8 | bottle-with-popping-cork :champagne: |
+| 9 | balloon 	:balloon: |
+| 10 | light-bulb :bulb: |
 | 11 | Eraser mode |
