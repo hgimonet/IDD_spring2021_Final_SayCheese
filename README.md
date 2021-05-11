@@ -6,7 +6,8 @@ by Hortense Gimonet, Irene Font Peradejordi, Brandt Beckerman, Rui Maki
 
 - [What It Is](#what-it-is)
 - [How to Use It](#how-to-use-it)
-- [How To Made It](#how-to-make-it)
+- [How To Make It](#how-to-make-it)
+- [Design Process](#design-process)
 
 
 ## What It Is
