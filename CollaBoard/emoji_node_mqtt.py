@@ -32,7 +32,7 @@ EMOJIS = {
     0: "emojis/lower-left-paintbrush_1f58c.png",
     1: "emojis/grinning-face_1f600.png",
     2: "emojis/partying-face_1f973.png",
-    3: "emojis/zany-face_1f92a.png",
+    3: "emojis/light-bulb_1f4a1.png",
     4: "emojis/shamrock_2618.png",
     5: "emojis/red-heart_2764-fe0f.png",
     6: "emojis/waving-hand_1f44b.png",
@@ -40,7 +40,8 @@ EMOJIS = {
     8: "emojis/graduation-cap_1f393.png",
     9: "emojis/bottle-with-popping-cork_1f37e.png",
     10: "emojis/balloon_1f388.png",
-    11: "emojis/light-bulb_1f4a1.png",
+    11: "emojis/zany-face_1f92a.png",
+
 }
 if ON_PI:
     for i in EMOJIS:
@@ -122,10 +123,13 @@ while True:
 
     if ON_PI:
         # Get mode from capacitor sensor
-        for i in range(12):
+        for i in range(11):
             if mpr121[i].value:
                 mode = i
                 print(f'Switching to mode {i}: {EMOJIS[i]}')
+            if mpr121[11].value:
+                print("clearing board")
+                client.publish(cam_topic, f"0")
 
     # get camera frame
     if webCam:
@@ -166,14 +170,18 @@ while True:
     # get all messages
     while not message_q.empty():
         m = message_q.get()
-        if m[0] == 0:
+        if len(m) == 1:
+            print("Clearing board.")
+            saved_emoji = []
+            saved_pixel = []
+        elif m[0] == 0:
             saved_pixel.append(m)
             # cap list memory
             saved_pixel = saved_pixel[-PIXEL_MEM:]
         else:
             saved_emoji.append(m)
             # cap list memory
-            saved_emoji = saved_emoji[-PIXEL_MEM:]
+            saved_emoji = saved_emoji[-EMOJI_MEM:]
 
     # Draw on the image
     for _,x,y,c in saved_pixel:
@@ -194,8 +202,11 @@ while True:
                        cv2.cvtColor(np.array(pil_img), cv2.COLOR_RGB2BGR))
         # cv2.imshow('Mask (press q to quit.)', detected_colors)
         if cv2.waitKey(1) & 0xFF == ord('p'):
-            mode = (mode+1) % 12
+            mode = (mode+1) % 11
             print(f"changing mode to {mode}")
+        if cv2.waitKey(1) & 0xFF == ord('e'):
+            print("clearing board")
+            client.publish(cam_topic, f"0")
     else:
         break
 
