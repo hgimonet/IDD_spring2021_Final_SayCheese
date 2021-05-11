@@ -125,6 +125,7 @@ while True:
         for i in range(12):
             if mpr121[i].value:
                 mode = i
+                print(f'Switching to mode {i}: {EMOJIS[i]}')
 
     # get camera frame
     if webCam:
@@ -180,6 +181,7 @@ while True:
 
     # print emojis on the image
     pil_img = Image.fromarray(cv2.cvtColor(img, cv2.COLOR_BGR2RGB))
+    pil_img.paste(EMOJIS[mode], box=(10, 10), mask=EMOJIS[mode])
     for i, x, y in saved_emoji:
         pil_img.paste(EMOJIS[i], box=(x, y), mask=EMOJIS[i])
 
@@ -192,7 +194,7 @@ while True:
                        cv2.cvtColor(np.array(pil_img), cv2.COLOR_RGB2BGR))
         # cv2.imshow('Mask (press q to quit.)', detected_colors)
         if cv2.waitKey(1) & 0xFF == ord('p'):
-            mode = min(mode+1, 11)
+            mode = (mode+1) % 12
             print(f"changing mode to {mode}")
     else:
         break
