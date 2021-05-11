@@ -48,6 +48,12 @@ You will also need the emoji image files in [CollaBoard/emojis]()
 
 Each computer running the code must be equipped with a camera or webcam. 
 
+To run the code on the pi, you must be on the GUI. Do access the pi with the GUI, you can VNC in.
+Once in the `CollaBoard` folder, you can start the program with the following command:
+```
+python emoji_node_mqtt.py
+```
+
 
 ### Making the Box
 The files required to laser cut and engrave the box are in [CollaBoard/Box_files]().
