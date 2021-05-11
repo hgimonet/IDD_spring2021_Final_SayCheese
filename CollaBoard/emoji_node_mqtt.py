@@ -10,7 +10,7 @@ import paho.mqtt.client as mqtt
 import uuid
 import queue
 
-ON_PI = False  # toggle this to false if not running on pi
+ON_PI = 'adafruit_mpr121' in sys.modules  # toggle this to false if not running on pi
 
 if ON_PI:
     import board
