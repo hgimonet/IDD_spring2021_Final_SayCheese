@@ -28,15 +28,26 @@ To switch between emojis, press the capacitive buttons on the pi box, or press '
 
 ## How It's Made
 
-Each Pi must be equiped with a camera, a capacitive touch board, and connected to a screen.
+Each Pi must be equipped with a camera, a capacitive touch board, and connected to a screen.
 A box to contain the Pi can be laser cut out of cardboard or wood. 
 You will also need conductive wire or tape to connect the capacitive sensors to the correct buttons on the box.
 
+### Materials
+
+For this project, you will need:
+- A [Raspberry Pi](https://www.adafruit.com/product/)
+- A 12-button [Capacitive Touch Sensor Breakout](https://www.adafruit.com/product/4830)
+- A screen
+- Thin wood or cardboard
+- Conductive wires or copper/aluminium tape
+- A single bright-colored object to be detected by the camera
+
 ### Code
 The only python required to run CollaBoard is [CollaBoard/emoji_node_mqtt.py](). 
-Each computer running the code must be equiped with a camera or webcam. 
+You will also need the emoji image files in [CollaBoard/emojis]()
 
-Depending on whether the code is run on a pi or a laptop, `ON_PI` should be toggled True or False.
+Each computer running the code must be equipped with a camera or webcam. 
+
 
 ### Making the Box
 The files required to laser cut and engrave the box are in [CollaBoard/Box_files]().
