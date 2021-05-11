@@ -9,6 +9,7 @@ import uuid
 import queue
 
 ON_PI = True  # toggle this to false if not running on pi
+
 if ON_PI:
     import board
     import busio
