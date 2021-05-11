@@ -10,17 +10,22 @@ import paho.mqtt.client as mqtt
 import uuid
 import queue
 
-ON_PI = 'adafruit_mpr121' in sys.modules  # toggle this to false if not running on pi
-print(f"Running on a Pi: {ON_PI}")
 
-if ON_PI:
+
+try:
     import board
     import busio
     import adafruit_mpr121
 
+    ON_PI = True  # toggle this to false if not running on pi
+
     # Import the capacitor sensor
     i2c = busio.I2C(board.SCL, board.SDA)
     mpr121 = adafruit_mpr121.MPR121(i2c)
+except:
+    ON_PI = False
+
+print(f"Running on a Pi: {ON_PI}")
 
 # load emojis
 EMOJIS = {
