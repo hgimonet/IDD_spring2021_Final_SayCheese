@@ -3,12 +3,14 @@ import cv2
 from PIL import Image
 import sys
 import time
+import random
+import matplotlib.colors as mcolors
 
 import paho.mqtt.client as mqtt
 import uuid
 import queue
 
-ON_PI = True  # toggle this to false if not running on pi
+ON_PI = False  # toggle this to false if not running on pi
 
 if ON_PI:
     import board
@@ -50,6 +52,8 @@ DETECT_COL_MAX = np.array((70, 255,255))
 # DETECT_COL_MAX = np.array((25, 255,255))
 
 PAINT_SIZE = 2
+PAINT_COLS = [tuple(int(round(i)) for i in mcolors.rgb_to_hsv(mcolors.to_rgb(col))*255)
+              for col in mcolors.TABLEAU_COLORS.keys()]
 
 PIXEL_MEM = 1500
 EMOJI_MEM = 12
@@ -88,6 +92,8 @@ def on_message(client, userdata, msg):
 
 # Every client needs a random ID
 cam_id = str(uuid.uuid1())
+# Pick a random color for the camera's pen:
+CAM_COLOR = random.randint(0,len(PAINT_COLS))
 cam_topic = f'IDD/CollaBoard/Cameras/{cam_id}'
 client = mqtt.Client(cam_id)
 # configure network encryption etc
@@ -134,7 +140,7 @@ while True:
             # img = cv2.rectangle(img, (x, y), (x + w, y + h), (255, 0, 0), 2)
             if mode == 0:  # paint mode
                 # mqtt post
-                client.publish(cam_topic,f"{x},{y}")
+                client.publish(cam_topic,f"{mode},{x},{y},{CAM_COLOR}")
             else:  # emoji mode
                 emoji_counting = True
                 emoji_timer = time.time() - emoji_start
@@ -153,18 +159,18 @@ while True:
     # get all messages
     while not message_q.empty():
         m = message_q.get()
-        if len(m) == 2:
+        if m[0] == 0:
             saved_pixel.append(m)
             # cap list memory
             saved_pixel = saved_pixel[-PIXEL_MEM:]
-        elif len(m) == 3:
+        else:
             saved_emoji.append(m)
             # cap list memory
             saved_emoji = saved_emoji[-PIXEL_MEM:]
 
     # Draw on the image
-    for x,y in saved_pixel:
-        img = cv2.circle(img, (x,y), radius=4, color=(255,0,255), thickness=-1)
+    for _,x,y,c in saved_pixel:
+        img = cv2.circle(img, (x,y), radius=4, color=PAINT_COLS[c], thickness=-1)
 
     # print emojis on the image
     pil_img = Image.fromarray(cv2.cvtColor(img, cv2.COLOR_BGR2RGB))
@@ -176,22 +182,19 @@ while True:
         if cv2.waitKey(1) & 0xFF == ord('q'):
             cap.release()
             break
-        if not ON_PI:
-            cv2.imshow(f'CollaBoard - mode {mode} (press m to switch drawing modes, or press q to quit.)', cv2.cvtColor(np.array(pil_img), cv2.COLOR_RGB2BGR))
-            # cv2.imshow('Mask (press q to quit.)', detected_colors)
-            if cv2.waitKey(1) & 0xFF == ord('p'):
-                mode = min(mode+1, 11)
-                print(f"changing mode to {mode}")
-        else:
-            cv2.imshow(f'CollaBoard (press q to quit.)',
+        cv2.imshow(f'CollaBoard (press q to quit.)',
                        cv2.cvtColor(np.array(pil_img), cv2.COLOR_RGB2BGR))
+        # cv2.imshow('Mask (press q to quit.)', detected_colors)
+        if cv2.waitKey(1) & 0xFF == ord('p'):
+            mode = min(mode+1, 11)
+            print(f"changing mode to {mode}")
     else:
         break
 
     if ON_PI:
-        time.sleep(0.2)
-    else:
         time.sleep(0.5)
+    else:
+        time.sleep(0.1)
 
 cv2.destroyAllWindows()
 

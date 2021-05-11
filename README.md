@@ -4,13 +4,24 @@ by Hortense Gimonet, Irene Font Peradejordi, Brandt Beckerman, Rui Maki
 
 ## How to Use
 
+This is a collaborative drawing board. You can leave graduation messages for you peers at CT!
+The are multiple boards around campus, and all of them are connected. Editting on one is editing them all!
+
+Grab the **writing tool** (a green piece of chalk or highlighter). 
+This is what you will use to interact with the Board! 
+
 ### Drawing Mode
 
-TODO
+In drawing mode, the tool will leave a trace wherever it is detected. 
+To have a break between lines or when writing letters, hide the pen behind your hand and show it again to resume painting.
 
 ### Emojis Mode
 
-Hold the green pen for 3 seconds to place an emoji. To switch between emojis, press the capacitive buttons on the pi box, or press 'p' on a laptop.
+Hold the green pen in place for 3 seconds to place an emoji. 
+A countdown to 3 seconds will start whenever the pen is dectected in emoji mode. 
+You can also hide the pen in your hand if you are still thinking about where to place the emoji.
+
+To switch between emojis, press the capacitive buttons on the pi box, or press 'p' on a laptop.
 
 ## How It's Made
 
