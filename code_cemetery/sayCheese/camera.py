@@ -7,6 +7,9 @@ import cv2
 import sys
 import time
 
+from PIL import Image
+
+
 font = cv2.FONT_HERSHEY_SIMPLEX
 comments = ['Dont forget to smile!!',
             'What a beautiful smile!']
