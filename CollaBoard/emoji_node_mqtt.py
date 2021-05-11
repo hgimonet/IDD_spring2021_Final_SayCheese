@@ -20,22 +20,25 @@ if ON_PI:
 
 # load emojis
 EMOJIS = {
-    0: "CollaBoard/emojis/lower-left-paintbrush_1f58c.png",
-    1: "CollaBoard/emojis/grinning-face_1f600.png",
-    2: "CollaBoard/emojis/partying-face_1f973.png",
-    3: "CollaBoard/emojis/zany-face_1f92a.png",
-    4: "CollaBoard/emojis/shamrock_2618.png",
-    5: "CollaBoard/emojis/red-heart_2764-fe0f.png",
-    6: "CollaBoard/emojis/waving-hand_1f44b.png",
-    7: "CollaBoard/emojis/globe-showing-americas_1f30e.png",
-    8: "CollaBoard/emojis/graduation-cap_1f393.png",
-    9: "CollaBoard/emojis/bottle-with-popping-cork_1f37e.png",
-    10: "CollaBoard/emojis/balloon_1f388.png",
-    11: "CollaBoard/emojis/light-bulb_1f4a1.png",
+    0: "emojis/lower-left-paintbrush_1f58c.png",
+    1: "emojis/grinning-face_1f600.png",
+    2: "emojis/partying-face_1f973.png",
+    3: "emojis/zany-face_1f92a.png",
+    4: "emojis/shamrock_2618.png",
+    5: "emojis/red-heart_2764-fe0f.png",
+    6: "emojis/waving-hand_1f44b.png",
+    7: "emojis/globe-showing-americas_1f30e.png",
+    8: "emojis/graduation-cap_1f393.png",
+    9: "emojis/bottle-with-popping-cork_1f37e.png",
+    10: "emojis/balloon_1f388.png",
+    11: "emojis/light-bulb_1f4a1.png",
 }
-# resize
-for i in EMOJIS:
-    EMOJIS[i] = Image.open(EMOJIS[i]).resize((50, 50), Image.LANCZOS)
+if ON_PI:
+    for i in EMOJIS:
+        EMOJIS[i] = Image.open(EMOJIS[i]).resize((50, 50), Image.LANCZOS)
+else:
+    for i in EMOJIS:
+        EMOJIS[i] = Image.open(f'CollaBoard/{EMOJIS[i]}').resize((50, 50), Image.LANCZOS)
 
 mode = 0 # Drawing mode by default
 
