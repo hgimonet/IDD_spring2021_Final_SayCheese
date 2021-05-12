@@ -20,6 +20,8 @@ will see a large TV mounted to a wall that is capturing their faces and movement
 will then be able to interact with the camera by placing emojis of their choice onto the photo and write messages on the
 photo. We hope this interactive photo booth can be a fun way to bring people together.
 
+[![CollaBoard Demo](http://img.youtube.com/vi/R66CZs_p3Es/0.jpg)](http://www.youtube.com/watch?v=R66CZs_p3Es "CollaBoard Demo")
+
 ## How to Use It
 
 To get started, grab the **writing tool** (a green piece of chalk or highlighter). This is what you will use to interact
