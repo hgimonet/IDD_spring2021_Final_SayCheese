@@ -112,6 +112,8 @@ To cut and assemble the box, follow [this tutorial]().
 <img src="https://github.com/hgimonet/IDD_spring2021_Final_SayCheese/blob/main/imgs/Selection_board_connections.png" height="400">
 <img src="https://cdn-shop.adafruit.com/970x728/4830-03.jpg" height="200">
 
+
+
 ## Design Process
 
 We iterated through multiple designs.

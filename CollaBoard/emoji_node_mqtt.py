@@ -43,6 +43,8 @@ EMOJIS = {
     11: "emojis/zany-face_1f92a.png",
 
 }
+
+# import emoji images
 if ON_PI:
     for i in EMOJIS:
         EMOJIS[i] = Image.open(EMOJIS[i]).resize((50, 50), Image.LANCZOS)
@@ -60,7 +62,7 @@ DETECT_COL_MAX = np.array((70, 255,255))
 
 PAINT_SIZE = 2
 PAINT_COLS = [tuple(int(round(i)) for i in mcolors.rgb_to_hsv(mcolors.to_rgb(col))*255)
-              for col in mcolors.TABLEAU_COLORS.keys()]
+              for col in ['b', 'g', 'r', 'c', 'm', 'y'] ]
 
 PIXEL_MEM = 1500
 EMOJI_MEM = 12
@@ -100,7 +102,7 @@ def on_message(client, userdata, msg):
 # Every client needs a random ID
 cam_id = str(uuid.uuid1())
 # Pick a random color for the camera's pen:
-CAM_COLOR = random.randint(0,len(PAINT_COLS))
+CAM_COLOR = random.randint(0,len(PAINT_COLS)-1)
 cam_topic = f'IDD/CollaBoard/Cameras/{cam_id}'
 client = mqtt.Client(cam_id)
 # configure network encryption etc
@@ -166,6 +168,7 @@ while True:
 
         if not emoji_counting:
             emoji_start = time.time()
+        # emoji_counting = False
 
     # get all messages
     while not message_q.empty():
@@ -201,9 +204,11 @@ while True:
         cv2.imshow(f'CollaBoard (press q to quit.)',
                        cv2.cvtColor(np.array(pil_img), cv2.COLOR_RGB2BGR))
         # cv2.imshow('Mask (press q to quit.)', detected_colors)
+        # for changing modes
         if cv2.waitKey(1) & 0xFF == ord('p'):
             mode = (mode+1) % 11
             print(f"changing mode to {mode}")
+        # for eraser mode
         if cv2.waitKey(1) & 0xFF == ord('e'):
             print("clearing board")
             client.publish(cam_topic, f"0")
@@ -213,7 +218,7 @@ while True:
     if ON_PI:
         time.sleep(0.5)
     else:
-        time.sleep(0.1)
+        time.sleep(0.005)
 
 cv2.destroyAllWindows()
 
