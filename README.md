@@ -1,6 +1,6 @@
 # [Final Project for IDD Spring 2021](https://github.com/FAR-Lab/Interactive-Lab-Hub/tree/Spring2021/Final%20Project)
 
-# CollaBoard, a collaborative drawing and emoji board!
+# CollaBoard, a collaborative drawing and emoji board! 📷 🖌
 
 by Hortense Gimonet, Irene Font Peradejordi, Brandt Beckerman, Rui Maki
 
