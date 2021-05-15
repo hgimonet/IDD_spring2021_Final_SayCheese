@@ -139,3 +139,8 @@ people's identifying features, but all of the solutions we considered (sihouetti
 computationally demanding and difficult to code. This pushed us to consider other methods of expression: why not let
 people write and leave emojis? We gave up on the idea of saving pictures, and focused on creating an interactive
 messaging/artboard experience instead.
+
+#### Paper prototype
+
+Initially, we started our prototyping process in paper. The box had to be big enought to fit the raspberry pi with the camera and the capacity sensor connected to it. It needed to have a small hole and a support for the camera. 
+
