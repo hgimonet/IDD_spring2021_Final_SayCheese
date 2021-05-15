@@ -144,3 +144,10 @@ messaging/artboard experience instead.
 
 Initially, we started our prototyping process in paper. The box had to be big enought to fit the raspberry pi with the camera and the capacity sensor connected to it. It needed to have a small hole and a support for the camera. 
 
+<p float="left">
+    <img src="paper_prototype/prot1.JPG" height="100" />
+    <img src="paper_prototype/prot2.JPG" height="100" />
+    <img src="paper_prototype/prot3.JPG" height="100" />
+</p>
+
+
