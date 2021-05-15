@@ -105,7 +105,7 @@ To cut and assemble the box, follow [this tutorial]().
 | 4 | red-heart :hearts: |
 | 5 | waving-hand :wave: |
 | 6 | globe :earth_americas: |
-| 7 | graduation-cap |
+| 7 | graduation-cap 🎓 |
 | 8 | bottle-with-popping-cork :champagne: |
 | 9 | balloon    :balloon: |
 | 10 | light-bulb :bulb: |
