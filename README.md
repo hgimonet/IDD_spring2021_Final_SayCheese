@@ -136,7 +136,7 @@ We then crafted our first Storyboard showcasing how a user would interact with t
 <img src="imgs/FPStoryboard1.png" height="600">
 
 This second storyboard showcases the distributed and collaborative nature of the Collaboard:
-<img src="imgs/FPStoryboard2.png" height="630">
+<img src="imgs/FPStoryboard2.png" height="660">
 
 
 ### Design 1: Distance Group Pictures
