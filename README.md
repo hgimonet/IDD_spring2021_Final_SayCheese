@@ -135,6 +135,9 @@ Below highlights the initial ideas we had for our ultimate photobooth idea for C
 We then crafted our first Storyboard showcasing how a user would interact with the photobooth at a single station: 
 <img src="imgs/FPStoryboard1.png" height="600">
 
+This second storyboard showcases the distributed and collaborative nature of the Collaboard:
+<img src="imgs/FPStoryboard2.png" height="600">
+
 
 ### Design 1: Distance Group Pictures
 
