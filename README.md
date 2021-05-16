@@ -171,11 +171,20 @@ We started small, prototyping the box using paper. Some important considerations
 
 #### Cardboard prototype
 
-We then used the lasercutter to create the cardboard prototype. Using the 40 watt laser cutter at 70 speed, 90 power for engraving and 20 speed, 45 power for cutting, we were able to create a cardboard prototype of the paper version displayed below to test the laser cutting settings and what the final design would look like when we use wood later. 
+We then used the lasercutter to create the cardboard prototype. Using the 40 watt laser cutter at 70 speed, 90 power for engraving and 20 speed, 45 power for cutting, we were able to create a cardboard prototype of the paper version displayed above. This prototype was created to test the laser cutting settings and visualize what the final design would look like when we use wood. 
 
 <p float="left">
     <img src="imgs/FPLaserCutFile.png" height="200" />
-    <img src="imgs/FPCardboard1" height="200" />
-    <img src="imgs/FPCardboard2" height="200" />
+    <img src="imgs/FPCardboard1.png" height="200" />
+    <img src="imgs/FPCardboard2.png" height="200" />
+</p>
+
+#### Wood prototype
+
+We then used the saw and laser cutter to cut a piece of MDF wood (0.25 inch) to create our final wood prototype. Using the suggested 30 speed and 100 power settings, we hoped to be able to build our wood prototype. However, even after 5 iterations of using the laser cutter at maximum power, we were not able to fully cut through the woodto build our final wood prototype. Thus, for the purposes of this project, we decided to stick to a cardboard prototype since the structure was fairly stable and the etching of the design came out clear. 
+
+<p float="left">
+    <img src="imgs/FPWood1.png" height="200" />
+    <img src="imgs/FPWood2.png" height="200" />
 </p>
 
