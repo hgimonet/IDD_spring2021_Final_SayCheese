@@ -163,11 +163,19 @@ messaging/artboard experience instead.
 
 We started small, prototyping the box using paper. Some important considerations we thought of were (1) the size – the box should be small enough to be portable and stand in a wide range of surfaces but big enough to fit a raspberry pi with the camera and the capacity sensor attached to it – (2) the user interaction – buttons or haptic inputs seem the most user friendly way to interact with the box and chose from the different modes. We ultimately chose haptic inputs over buttons because buttons would require a bigger surface – (3) communicating the instructions to the user – the interaction has 2 different modes: drawing and emoji, and inside the emoji mode, the user can choose from a different range of options. It was important to communicate this hierarchy with the design we ended up etching a face of the box. 
 
-
 <p float="left">
     <img src="paper_prototype/prot2.JPG" height="200" />
     <img src="paper_prototype/prot1.JPG" height="200" />
     <img src="paper_prototype/prot3.JPG" height="200" />
 </p>
 
+#### Cardboard prototype
+
+We then used the lasercutter to create the cardboard prototype. Using the 40 watt laser cutter at 70 speed, 90 power for engraving and 20 speed, 45 power for cutting, we were able to create a cardboard prototype of the paper version displayed below to test the laser cutting settings and what the final design would look like when we use wood later. 
+
+<p float="left">
+    <img src="imgs/FPLaserCutFile.png" height="200" />
+    <img src="imgs/FPCardboard1" height="200" />
+    <img src="imgs/FPCardboard2" height="200" />
+</p>
 
