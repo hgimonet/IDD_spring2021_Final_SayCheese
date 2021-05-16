@@ -18,12 +18,14 @@ There are multiple boards around campus, and all of them are connected. Editing 
 Our aim was to create fun, interactive, and distributed photo booth stations for Cornell Tech grads. When these grads come across one of these photobooths (located in stations across campus like Tata, Bloomberg, Cafe, etc.), they will see a large TV mounted to a wall that is capturing their faces and movements through the raspberry pi camera. They will then be able to interact with the camera by placing emojis of their choice onto the photo and write messages on the
 photo. Other people who are also using the photo booth at other stations can also edit the photo through emojis and drawings. 
 
-**Impact and Applications**
+### Impact and Applications
 
 We hope this interactive photo booth can serve as a fun way to bring people together who are located at different locations. While we created the Collaboard for the purposes of having a fun graduation activity for CT grads, it can also be used for:
 1. Remote learning over zoom when multiple people need to collaborate on a photo or drawing at the same time (like Google docs but for images)
-2. Connecting long distance friends, couples, family through a fun creative project 
+2. Connecting long distance friends, couples, families through a fun creative project 
 3. Graphic designers, UX Designers, Photographers etc. to collaborate on a work assignment remotely
+4. The basis of a smartphone app game like "Draw Something"
+5. The new "Snapchat," a social media platform where users can send images that they can edit together 
 
 [![CollaBoard Demo](http://img.youtube.com/vi/R66CZs_p3Es/0.jpg)](http://www.youtube.com/watch?v=R66CZs_p3Es "CollaBoard Demo")
 
@@ -124,6 +126,10 @@ To cut and assemble the box, follow [this tutorial]().
 ## Design Process
 
 We iterated through multiple designs.
+
+### Ideas and Storyboard
+
+
 
 ### Design 1: Distance Group Pictures
 
