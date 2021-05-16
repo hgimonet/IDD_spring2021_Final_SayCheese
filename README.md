@@ -129,7 +129,7 @@ We iterated through multiple designs.
 
 ### Ideas and Storyboard
 
-<p float="center">
+<p float="middle">
     <img src="imgs/FPIdeas.png" height="600" /> </br>
     <img src="imgs/FPStoryboard1.png" height="600" />
 </p>
