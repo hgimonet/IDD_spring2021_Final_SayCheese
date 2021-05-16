@@ -142,7 +142,8 @@ messaging/artboard experience instead.
 
 #### Paper prototype
 
-Initially, we started our prototyping process in paper. The box had to be big enought to fit the raspberry pi with the camera and the capacity sensor connected to it. It needed to have a small hole and a support for the camera. 
+We started small, prototyping the box using paper. Some important considerations we thought of were (1) the size – the box should be small enough to be portable and stand in a wide range of surfaces but big enough to fit a raspberry pi with the camera and the capacity sensor attached to it – (2) the user interaction – buttons or haptic inputs seem the most user friendly way to interact with the box and chose from the different modes. We ultimately chose haptic inputs over buttons because buttons would require a bigger surface – (3) communicating the instructions to the user – the interaction has 2 different modes: drawing and emoji, and inside the emoji mode, the user can choose from a different range of options. It was important to communicate this hierarchy with the design we ended up etching a face of the box. 
+
 
 <p float="left">
     <img src="paper_prototype/prot2.JPG" height="200" />
