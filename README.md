@@ -129,8 +129,10 @@ We iterated through multiple designs.
 
 ### Ideas and Storyboard
 
-![](FPIdeas.png)
-![](FPStoryboard1.png)
+<p>
+    <img src="imgs/FPIdeas.png" height="200" />
+    <img src="imgs/FPStoryboard1.png" height="200" />
+</p>
 
 ### Design 1: Distance Group Pictures
 
