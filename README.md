@@ -130,7 +130,8 @@ We iterated through multiple designs.
 ### Ideas and Storyboard
 
 ![](FPIdeas.png)
-![](Storyboard1.png)
+
+![](FPStoryboard1.png)
 
 ### Design 1: Distance Group Pictures
 
