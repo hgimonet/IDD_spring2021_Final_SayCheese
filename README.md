@@ -129,10 +129,12 @@ We iterated through multiple designs.
 
 ### Ideas and Storyboard
 
-<p float="middle">
-    <img src="imgs/FPIdeas.png" height="600" /> </br>
-    <img src="imgs/FPStoryboard1.png" height="600" />
-</p>
+Below highlights the initial ideas we had for our ultimate photobooth idea for CT grads: 
+img src="imgs/FPIdeas.png" height="600"
+
+We then crafted our first Storyboard showcasing how a user would interact with the photobooth at a single station: 
+img src="imgs/FPStoryboard1.png" height="600" 
+
 
 ### Design 1: Distance Group Pictures
 
