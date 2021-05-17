@@ -181,7 +181,7 @@ We then used the lasercutter to create the cardboard prototype. Using the 40 wat
 
 #### Wood prototype
 
-We then used the saw and laser cutter to cut a piece of MDF wood (0.25 inch) to create our final wood prototype. Using the suggested 30 speed and 100 power settings, we hoped to be able to build our wood prototype. However, even after 5 iterations of using the laser cutter at maximum power, we were not able to fully cut through the woodto build our final wood prototype. Thus, for the purposes of this project, we decided to stick to a cardboard prototype since the structure was fairly stable and the etching of the design came out clear. 
+We then used the saw and laser cutter to cut a piece of MDF wood (0.25 inch) to create our final wood prototype. Using the suggested 30 speed and 100 power settings, we hoped to be able to build our wood prototype. However, even after 5 iterations of using the laser cutter at maximum power, we were not able to fully cut through the wood to build our final wood prototype. Thus, for the purposes of this project, we decided to stick to a cardboard prototype since the structure was fairly stable and the etching of the design came out clear. 
 
 <p float="left">
     <img src="imgs/FPWood1.png" height="200" />
