@@ -12,7 +12,7 @@ by Hortense Gimonet, Irene Font Peradejordi, Brandt Beckerman, Rui Maki
 
 ## What It Is
 
-This is a collaborative drawing board. You can leave graduation messages for you peers at CT!
+This is a collaborative drawing board. You can leave graduation messages for your peers at CT!
 There are multiple boards around campus, and all of them are connected. Editing on one is editing them all!
 
 Our aim was to create fun, interactive, and distributed photo booth stations for Cornell Tech grads. When these grads come across one of these photobooths (located in stations across campus like Tata, Bloomberg, Cafe, etc.), they will see a large TV mounted to a wall that is capturing their faces and movements through the raspberry pi camera. They will then be able to interact with the camera by placing emojis of their choice onto the photo and write messages on the
