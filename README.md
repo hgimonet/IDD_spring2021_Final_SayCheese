@@ -1,6 +1,6 @@
 # [Final Project for IDD Spring 2021](https://github.com/FAR-Lab/Interactive-Lab-Hub/tree/Spring2021/Final%20Project)
 
-# CollaBoard, a collaborative drawing and emoji board!
+# CollaBoard, a collaborative drawing and emoji board! 📷 🖌
 
 by Hortense Gimonet, Irene Font Peradejordi, Brandt Beckerman, Rui Maki
 
@@ -15,10 +15,19 @@ by Hortense Gimonet, Irene Font Peradejordi, Brandt Beckerman, Rui Maki
 This is a collaborative drawing board. You can leave graduation messages for you peers at CT!
 There are multiple boards around campus, and all of them are connected. Editing on one is editing them all!
 
-Our aim was to create a fun interactive photo booth station for Cornell Tech grads. When these grads enter Tata, they
-will see a large TV mounted to a wall that is capturing their faces and movements through the raspberry pi camera. They
-will then be able to interact with the camera by placing emojis of their choice onto the photo and write messages on the
-photo. We hope this interactive photo booth can be a fun way to bring people together.
+Our aim was to create fun, interactive, and distributed photo booth stations for Cornell Tech grads. When these grads come across one of these photobooths (located in stations across campus like Tata, Bloomberg, Cafe, etc.), they will see a large TV mounted to a wall that is capturing their faces and movements through the raspberry pi camera. They will then be able to interact with the camera by placing emojis of their choice onto the photo and write messages on the
+photo. Other people who are also using the photo booth at other stations can also edit the photo through emojis and drawings. 
+
+### Impact and Applications
+
+We hope this interactive photo booth can serve as a fun way to bring people together who are located at different locations. While we created the Collaboard for the purposes of having a fun graduation activity for CT grads, it can also be used for:
+1. Remote learning over zoom when multiple people need to collaborate on a photo or drawing at the same time (like Google docs but for images)
+2. Connecting long distance friends, couples, families through a fun creative project 
+3. Graphic designers, UX Designers, Photographers etc. to collaborate on a work assignment remotely
+4. The basis of a smartphone app game like "Draw Something"
+5. The new "Snapchat," a social media platform where users can send images that they can edit together 
+
+[![CollaBoard Demo](http://img.youtube.com/vi/R66CZs_p3Es/0.jpg)](http://www.youtube.com/watch?v=R66CZs_p3Es "CollaBoard Demo")
 
 ## How to Use It
 
@@ -121,7 +130,7 @@ To cut and assemble the box, follow [this tutorial]().
 | 4 | red-heart :hearts: |
 | 5 | waving-hand :wave: |
 | 6 | globe :earth_americas: |
-| 7 | graduation-cap |
+| 7 | graduation-cap 🎓 |
 | 8 | bottle-with-popping-cork :champagne: |
 | 9 | balloon    :balloon: |
 | 10 | light-bulb :bulb: |
@@ -135,6 +144,18 @@ To cut and assemble the box, follow [this tutorial]().
 ## Design Process
 
 We iterated through multiple designs.
+
+### Ideas and Storyboard
+
+Below highlights the initial ideas we had for our ultimate photobooth idea for CT grads: 
+<img src="imgs/FPIdeas.png" height="600">
+
+We then crafted our first Storyboard showcasing how a user would interact with the photobooth at a single station: 
+<img src="imgs/FPStoryboard1.png" height="600">
+
+This second storyboard showcases the distributed and collaborative nature of the Collaboard:
+<img src="imgs/FPStoryboard2.png" height="640">
+
 
 ### Design 1: Distance Group Pictures
 
@@ -155,3 +176,33 @@ people's identifying features, but all of the solutions we considered (sihouetti
 computationally demanding and difficult to code. This pushed us to consider other methods of expression: why not let
 people write and leave emojis? We gave up on the idea of saving pictures, and focused on creating an interactive
 messaging/artboard experience instead.
+
+#### Paper prototype
+
+We started small, prototyping the box using paper. Some important considerations we thought of were (1) the size – the box should be small enough to be portable and stand in a wide range of surfaces but big enough to fit a raspberry pi with the camera and the capacity sensor attached to it – (2) the user interaction – buttons or haptic inputs seem the most user friendly way to interact with the box and chose from the different modes. We ultimately chose haptic inputs over buttons because buttons would require a bigger surface – (3) communicating the instructions to the user – the interaction has 2 different modes: drawing and emoji, and inside the emoji mode, the user can choose from a different range of options. It was important to communicate this hierarchy with the design we ended up etching a face of the box. 
+
+<p float="left">
+    <img src="paper_prototype/prot2.JPG" height="200" />
+    <img src="paper_prototype/prot1.JPG" height="200" />
+    <img src="paper_prototype/prot3.JPG" height="200" />
+</p>
+
+#### Cardboard prototype
+
+We then used the lasercutter to create the cardboard prototype. Using the 40 watt laser cutter at 70 speed, 90 power for engraving and 20 speed, 45 power for cutting, we were able to create a cardboard prototype of the paper version displayed above. This prototype was created to test the laser cutting settings and visualize what the final design would look like when we use wood. 
+
+<p float="left">
+    <img src="imgs/FPLaserCutFile.png" height="200" />
+    <img src="imgs/FPCardboard1.png" height="200" />
+    <img src="imgs/FPCardboard2.png" height="200" />
+</p>
+
+#### Wood prototype
+
+We then used the saw and laser cutter to cut a piece of MDF wood (0.25 inch) to create our final wood prototype. Using the suggested 30 speed and 100 power settings, we hoped to be able to build our wood prototype. However, even after 5 iterations of using the laser cutter at maximum power, we were not able to fully cut through the wood to build our final wood prototype. Thus, for the purposes of this project, we decided to stick to a cardboard prototype since the structure was fairly stable and the etching of the design came out clear. 
+
+<p float="left">
+    <img src="imgs/FPWood1.png" height="200" />
+    <img src="imgs/FPWood2.png" height="200" />
+</p>
+
