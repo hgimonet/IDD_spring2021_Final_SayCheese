@@ -62,10 +62,12 @@ For this project, you will need:
 
 - A [Raspberry Pi](https://www.adafruit.com/product/)
 - A 12-button [Capacitive Touch Sensor Breakout](https://www.adafruit.com/product/4830)
-- A screen
+- A Raspberry Pi Camera
+- A screen connected to the pi
 - Thin wood or cardboard
 - Conductive wires or copper/aluminium tape
 - A single bright-colored object to be detected by the camera
+- A laser-cutter, or a box cutter, ruler, and pencil
 
 ### Code
 
@@ -94,7 +96,8 @@ When the user wishes to add something to the board, a message is sent to every c
 The interactive aspect of the board is achieved using basic color thresholding and contouring on the frames taken by a Raspberry Pi Camera or computer webcam.
 The node loops over every frame supplied by the camera at a given interval.
 First, the camera frame is thresholded to detect the drawing pen color (we have used green and yellow highlighter caps). 
-Then, we applied contouring on the thresholded image. 
+Then, we applied contouring on the thresholded image. In order to define a good range to detect the pen object, you can start with a similar web color, and broaden or move the range through trial and error. 
+It is best to do this in the location at a similar time of day you will be setting up the camera node, as the color ranges will vary by lighting. 
 
 If an instance was detected, we then wait for the frame equivalent of 3 seconds before sending a message via mqtt containing an index corresponding to either an emoji or a dot of color, as well as the x,y coordinates of the upper left corner of the contour bounding box.
 The object to be superposed is determined by a state variable that can be changed either through pressing the buttons connected to the capacitor sensor, or toggled through by pressing the p key on a non-pi computer.
