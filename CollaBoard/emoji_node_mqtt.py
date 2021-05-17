@@ -52,6 +52,8 @@ else:
     for i in EMOJIS:
         EMOJIS[i] = Image.open(f'CollaBoard/{EMOJIS[i]}').resize((50, 50), Image.LANCZOS)
 
+# Set range of color to detect for the drawing pen
+
 # Green HSV
 DETECT_COL_MIN = np.array((40, 30,30))
 DETECT_COL_MAX = np.array((70, 255,255))
@@ -64,6 +66,7 @@ PAINT_SIZE = 2
 PAINT_COLS = [tuple(int(round(i)) for i in mcolors.rgb_to_hsv(mcolors.to_rgb(col))*255)
               for col in ['b', 'g', 'r', 'c', 'm', 'y'] ]
 
+# Set the memory size for the pen and the emojis
 PIXEL_MEM = 1500
 EMOJI_MEM = 12
 

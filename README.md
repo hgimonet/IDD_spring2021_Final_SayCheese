@@ -64,7 +64,7 @@ For this project, you will need:
 
 The only python required to run CollaBoard
 is [CollaBoard/emoji_node_mqtt.py](https://github.com/hgimonet/IDD_spring2021_Final_SayCheese/blob/main/CollaBoard/emoji_node_mqtt.py)
-. You will also need the emoji image files
+. You will also need the  emoji image files
 in [CollaBoard/emojis](https://github.com/hgimonet/IDD_spring2021_Final_SayCheese/tree/main/CollaBoard/emojis)
 
 Each computer running the code must be equipped with a camera or webcam.
@@ -77,6 +77,24 @@ python emoji_node_mqtt.py
 ```
 
 #### Technical Details
+
+CollaBoard consists of Pis or computers all listening to each other through mqtt. 
+Each node is retrieving frames from its camera, and performing basic computer vision techniques to allow the user to add emojis or dots of color to a shared canvas (which is superimposed onto the captured frames.) 
+When the user wishes to add something to the board, a message is sent to every computer node on the CollaBoard network, and every node prints the addition onto their respective screen.
+
+The interactive aspect of the board is achieved using basic color thresholding and contouring on the frames taken by a Raspberry Pi Camera or computer webcam.
+The node loops over every frame supplied by the camera at a given interval.
+First, the camera frame is thresholded to detect the drawing pen color (we have used green and yellow highlighter caps). 
+Then, we applied contouring on the thresholded image. 
+
+If an instance was detected, we then wait for the frame equivalent of 3 seconds before sending a message via mqtt containing an index corresponding to either an emoji or a dot of color, as well as the x,y coordinates of the upper left corner of the contour bounding box.
+The object to be superposed is determined by a state variable that can be changed either through pressing the buttons connected to the capacitor sensor, or toggled through by pressing the p key on a non-pi computer.
+
+Then, at the end of the loop, all messages are processed and turned into emojis and circles of color to be plotted onto the captured image frame.
+
+To avoid overloading the screen, we capped the number emojis and dots on the screen at a time to 12 emojis and 1500 dots. 
+When those caps are reached, the oldest emojis or dots are forgotten. 
+This insures the board is never too crowded, even if many people are interacting with it as a time.
 
 ### Making the Box
 
